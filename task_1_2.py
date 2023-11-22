@@ -17,8 +17,6 @@ def verify_arithmetic_operators():
 
 try:
     verify_arithmetic_operators()
-except TypeError as e:
-    print(e)
 except ValueError as e:
     print(e)
 finally:
