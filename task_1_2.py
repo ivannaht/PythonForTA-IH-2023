@@ -12,7 +12,7 @@ def verify_arithmetic_operators():
               f"a ** b = {a ** b}\n"
               f"a // b = {a // b}\n"
               f"a % b = {a % b}\n")
-    print(result.format(a, b))
+    print(result)
 
 
 try:
