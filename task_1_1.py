@@ -1,8 +1,9 @@
-name = input("WHAT IS YOUR NAME?")
-age = input("HOW OLD ARE YOU?")
-city = input("WHERE DO YOU LIVE?")
+
+name: str = input("WHAT IS YOUR NAME?")
+age = int(input("HOW OLD ARE YOU?"))
+city: str = input("WHERE DO YOU LIVE?")
 
 
-print("HELLO, {}".format(name))
-print("YOUR AGE IS {}".format(age))
-print("YOU LIVE IN {}".format(city))
+print(f"HELLO, {name}")
+print(f"YOUR AGE IS {age}")
+print(f"YOU LIVE IN {city}")
