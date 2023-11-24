@@ -12,11 +12,11 @@ def test_to_minutes(input_value, output_value):
 
 @pytest.mark.parametrize("input_value, output_value", [(12, 0.2), (5, 0.0833), (0, 0)])
 def test_to_hours(input_value, output_value):
-    """verify to_hours function case 1"""
+    """verify to_hours function"""
     assert to_hours(input_value) == output_value
 
 
 @pytest.mark.parametrize("input_value1, input_value2, output_value", [(2, 3, False), (12, 3, True), (-22, -2, True)])
 def test_is_whole_div_case1(input_value1, input_value2, output_value):
-    """verify is_whole_div function case 1"""
+    """verify is_whole_div function"""
     assert is_whole_div(input_value1, input_value2) is output_value
