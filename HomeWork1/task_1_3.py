@@ -11,7 +11,7 @@ def to_hours(minutes) -> float:
     return round(minutes / 60, 4)
 
 
-def is_whole_div(a, b):
+def is_whole_div(a, b) -> bool:
     """verify that a is a multiple of b"""
     return a % b == 0
 

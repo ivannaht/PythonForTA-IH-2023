@@ -1,27 +1,22 @@
 """ tests for task 1_3"""
+import pytest
+
 from HomeWork1.task_1_3 import to_minutes, to_hours, is_whole_div
 
 
-def test_to_minutes():
+@pytest.mark.parametrize("input_value, output_value", [(1.5, 90.0), (0.01, 0.6), (0, 0)])
+def test_to_minutes(input_value, output_value):
     """verify to_minutes function"""
-    assert to_minutes(1.5) == 90.0
+    assert to_minutes(input_value) == output_value
 
 
-def test_to_hours_case1():
+@pytest.mark.parametrize("input_value, output_value", [(12, 0.2), (5, 0.0833), (0, 0)])
+def test_to_hours(input_value, output_value):
     """verify to_hours function case 1"""
-    assert to_hours(12) == 0.2
+    assert to_hours(input_value) == output_value
 
 
-def test_to_hours_case2():
-    """verify to_hours function case 2"""
-    assert to_hours(5) == 0.0833
-
-
-def test_is_whole_div_case1():
+@pytest.mark.parametrize("input_value1, input_value2, output_value", [(2, 3, False), (12, 3, True), (-22, -2, True)])
+def test_is_whole_div_case1(input_value1, input_value2, output_value):
     """verify is_whole_div function case 1"""
-    assert is_whole_div(2, 3) is False
-
-
-def test_is_whole_div_case2():
-    """verify is_whole_div function case 2"""
-    assert is_whole_div(12, 3) is True
+    assert is_whole_div(input_value1, input_value2) is output_value
