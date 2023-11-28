@@ -11,5 +11,5 @@ from HomeWork2.task_2_1 import stat
                          ])
 def test_stat(input_value, output_value):
     """verify stat function"""
-       assert stat(input_value) == output_value
+    assert stat(input_value) == output_value
 
