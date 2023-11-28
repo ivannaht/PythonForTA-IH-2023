@@ -1,7 +1,9 @@
+""" task 2_1"""
 from functools import reduce
 
 
 def stat(numbers):
+    """stat function for lists"""
     result = []
     total_amount = len(numbers)
     unique_amount = len(list(reduce(
