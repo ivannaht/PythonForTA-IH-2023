@@ -1,6 +1,4 @@
 from functools import reduce
-from collections import Counter
-from isort.sorting import sort
 
 
 def stat(numbers):
