@@ -16,7 +16,7 @@ def convert(str_main: str, n: int) -> str:
         count = len(str_main) // n
         first = 0
         last = n
-        result = ''
+        result = ""
         for i in range(0, count):
             result_str = str_main[first:last]
             result_list = list(str_main[first:last])
