@@ -1,7 +1,7 @@
 """ tests for task 3_1"""
 import pytest
 
-from HomeWork3.task_3_1 import convert
+from tasks.task_3_1 import convert
 
 
 @pytest.mark.parametrize("input_value1, input_value2, output_value", [

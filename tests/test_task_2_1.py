@@ -1,7 +1,7 @@
 """ tests for task 2_1"""
 import pytest
 
-from HomeWork2.task_2_1 import stat
+from tasks.task_2_1 import stat
 
 
 @pytest.mark.parametrize("input_value, output_value",
