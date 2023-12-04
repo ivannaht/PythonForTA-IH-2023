@@ -1,7 +1,7 @@
 """ tests for task 1_3"""
 import pytest
 
-from HomeWork1.task_1_3 import to_minutes, to_hours, is_whole_div
+from tasks.task_1_3 import to_minutes, to_hours, is_whole_div
 
 
 @pytest.mark.parametrize("input_value, output_value", [(1.5, 90.0), (0.01, 0.6), (0, 0)])
