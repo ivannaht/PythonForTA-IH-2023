@@ -13,7 +13,7 @@ class InsufficientAgeError(Exception):
 
 
 class NegativeValueError(Exception):
-    """Custom exception for age in task 1_2"""
+    """Custom exception for second number in task 1_2"""
     def __init__(self, b):
         super().__init__(f"invalid number: {b}. The number should be positive")
 
@@ -21,5 +21,5 @@ class NegativeValueError(Exception):
 class BigNumberError(Exception):
     """Custom exception for task 3_1"""
 
-    def __init__(self, str, n):
-        super().__init__(f"{n} is invalid value for n. n must be less than or equal {len(str)}")
+    def __init__(self, str_main, n):
+        super().__init__(f"{n} is invalid value for n. n must be less than or equal {len(str_main)}")
