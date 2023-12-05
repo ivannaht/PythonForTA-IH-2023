@@ -1,11 +1,14 @@
 import pytest
 
-from helpers.custom_exceptions import InsufficientAgeError
+from helpers.custom_exceptions import InsufficientAgeError, EmptyValueError
 from tasks.task_1_1 import show_user_info
 
 data = [
-    ("First", "5", "Second", InsufficientAgeError),
-    ("a", "b", "c", ValueError)
+    ("first", "5", "second", InsufficientAgeError),
+    ("a", "b", "c", ValueError),
+    ("", "20", "test", EmptyValueError),
+    ("test", "20", "", EmptyValueError),
+    ("first", "", "second",  EmptyValueError),
 ]
 
 
