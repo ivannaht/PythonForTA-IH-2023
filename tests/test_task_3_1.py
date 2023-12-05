@@ -24,7 +24,7 @@ def test_convert(input_value1, input_value2, output_value):
 data = [
         ("1all23", 5, ValueError),
         ("1.56.37.5", 3, ValueError),
-        ("-10-56-248", 30, Exception),
+        ("-12", 3, ValueError),
         ("123456", 'a', TypeError),
         ("123456", 1.5, TypeError),
         ("123", 1000, BigNumberError)
