@@ -17,9 +17,7 @@ def show_user_info(name, age, city):
     if int(age) < min_age:
         raise InsufficientAgeError(age, min_age)
 
-    user_info = (f"HELLO, {name.upper()}! YOUR AGE IS {int(age)}. YOU LIVE IN {city.upper()}.")
-
-    return user_info
+    return f"HELLO, {name.upper()}! YOUR AGE IS {int(age)}. YOU LIVE IN {city.upper()}."
 
 
 print(show_user_info(input_name, input_age, input_city))
