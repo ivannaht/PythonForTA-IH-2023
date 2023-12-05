@@ -1,4 +1,5 @@
 """ task 3_1"""
+from helpers.custom_exceptions import BigNumberError
 
 
 def calculate_cubes_sum(numbers):
@@ -10,6 +11,11 @@ def calculate_cubes_sum(numbers):
 
 def convert(str_main: str, n: int) -> str:
     """convert function for strings"""
+    if isinstance(n, (float, str)):
+        raise TypeError("n must be integer number")
+    if len(str_main)!=0 and n > len(str_main):
+        raise BigNumberError(str_main, n)
+
     if n == 0:
         return ""
 
@@ -30,3 +36,4 @@ def convert(str_main: str, n: int) -> str:
 
 
 print(convert("123456987654", 6))
+# print(convert("123", 1000))
