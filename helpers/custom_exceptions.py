@@ -12,6 +12,12 @@ class InsufficientAgeError(Exception):
         super().__init__(f"{age} is insufficient age. Age must be greater than or equal {min_age} years")
 
 
+class NegativeValueError(Exception):
+    """Custom exception for age in task 1_2"""
+    def __init__(self, b):
+        super().__init__(f"invalid number: {b}. The number should be positive")
+
+
 class BigNumberError(Exception):
     """Custom exception for task 3_1"""
 
