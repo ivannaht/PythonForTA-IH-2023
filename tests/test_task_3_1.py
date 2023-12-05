@@ -35,4 +35,4 @@ data = [
 def test_convert_with_exceptions(str_main, n, e):
     """verify convert function"""
     with pytest.raises(e):
-        assert convert(str_main, n)
+        convert(str_main, n)
