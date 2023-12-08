@@ -1,4 +1,5 @@
 """ task 3_1"""
+from helpers.custom_exceptions import BigNumberError
 
 
 def calculate_cubes_sum(numbers):
@@ -8,8 +9,13 @@ def calculate_cubes_sum(numbers):
     return cubes_sum
 
 
-def convert(str_main: str, n: int) -> str:
+def convert(str_main, n) -> str:
     """convert function for strings"""
+    if not isinstance(n, int):
+        raise TypeError("n must be integer number")
+    if len(str_main) != 0 and n > len(str_main):
+        raise BigNumberError(str_main, n)
+
     if n == 0:
         return ""
 
