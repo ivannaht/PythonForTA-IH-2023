@@ -25,13 +25,13 @@ def validate_password(password):
 
 
 def find_invalid_passwords(passwords):
-    incorrect_passwords = set()
+    invalid_passwords = set()
     for password in passwords:
         if validate_password(password):
             continue
-        incorrect_passwords.add(password)
+        invalid_passwords.add(password)
 
-    return (f"Passwords {incorrect_passwords} are invalid.\n"
+    return (f"Passwords {invalid_passwords} are invalid.\n"
             f"Password should be greater than 6 characters and less than 16 characters.\n"
             f"Password should contain at least 1 digit.\n"
             f"Password should contain at least 1 lower case letter.\n"
