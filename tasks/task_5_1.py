@@ -1,6 +1,9 @@
 import csv
 import re
+import secrets
+import string
 from pathlib import Path
+
 
 credsFile = "creds.csv"
 assetsDirectory = "assets"
@@ -39,4 +42,22 @@ def find_invalid_passwords(passwords):
             f"Password should contain at least 1 of $@# special character.\n")
 
 
+def generate_new_password():
+    combination = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation
+    new_password = ""
+    for i in range(6, 16):
+        new_password += combination[secrets.randbelow(len(combination))]
+    return new_password
+
+
+def generate_passwords():
+    random_passwords = set()
+    for i in range(10):
+        random_password = generate_new_password()
+        random_passwords.add(random_password)
+    return random_passwords
+
+
 print(find_invalid_passwords(get_passwords()))
+print(find_invalid_passwords(generate_passwords()))
+
