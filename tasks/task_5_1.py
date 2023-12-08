@@ -14,18 +14,20 @@ DATA_FILE = BASE_DIR.joinpath(assetsDirectory).joinpath(credsFile)
 
 def get_passwords():
     with open(DATA_FILE, mode="r") as file:
-        csvfile = csv.reader(file)
+        reader = csv.reader(file)
         # skip the first row with table headers
-        next(csvfile)
-        passwords = [tuple(row)[1] for row in csvfile]
+        next(reader)
+        passwords = [tuple(row)[1] for row in reader]
+
     return passwords
 
 
 def set_passwords():
     with open(DATA_FILE, mode="a") as file:
-        new_passwords = generate_passwords()
-        csvfile = csv.writer(file)
-        csvfile.writerow('user' + ',' + new_passwords)
+        writer = csv.writer(file)
+        new_creds = generate_new_creds()
+        writer.writerow(new_creds)
+
 
 def validate_password(password):
     expected_password = r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$])[A-Za-z0-9@#$].{6,16}$"
@@ -49,30 +51,28 @@ def find_invalid_passwords(passwords):
 
 
 def generate_new_creds():
-    password_combination = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation
+    password_combination = (string.ascii_lowercase + string.ascii_uppercase + string.digits
+                            + string.punctuation.replace(",",""))
     username_combination = string.ascii_lowercase
-    new_username = ""
+    new_username = "user"
     new_password = ""
-    new_creds = {}
     for i in range(6, 16):
         new_username += username_combination[secrets.randbelow(len(username_combination))]
         new_password += password_combination[secrets.randbelow(len(password_combination))]
-    new_creds.update({"username": new_username, "password": new_password})
-    print(new_creds)
+    new_creds = [new_username, new_password]
 
-    return new_password
+    return new_creds
 
 
 def generate_passwords():
     random_passwords = set()
     for i in range(10):
-        random_password = generate_new_creds()
+        random_password = generate_new_creds()[1]
         random_passwords.add(random_password)
+
     return random_passwords
 
 
+set_passwords()
 print(find_invalid_passwords(get_passwords()))
 print(find_invalid_passwords(generate_passwords()))
-
-set_passwords()
-
