@@ -18,5 +18,14 @@ def get_passwords():
     return passwords
 
 
-print(get_passwords())
+def check_passwords(passwords):
+    incorrect_passwords = []
+    for password in passwords:
+        if len(password) >= 8:
+            continue
+        incorrect_passwords.append(password)
+    return f"Passwords {incorrect_passwords} are incorrect. Password should be greater than 8 characters."
+
+
+print(check_passwords(get_passwords()))
 
