@@ -21,10 +21,11 @@ def get_passwords():
 def check_passwords(passwords):
     incorrect_passwords = []
     for password in passwords:
-        if len(password) >= 8:
+        if 6 <= len(password) <= 16:
             continue
         incorrect_passwords.append(password)
-    return f"Passwords {incorrect_passwords} are incorrect. Password should be greater than 8 characters."
+    return (f"Passwords {incorrect_passwords} are incorrect. "
+            f"Password should be greater than 6 characters and less than 16 characters.")
 
 
 print(check_passwords(get_passwords()))
