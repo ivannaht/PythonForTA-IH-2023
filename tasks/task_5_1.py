@@ -18,24 +18,25 @@ def get_passwords():
     return passwords
 
 
-def check_passwords(passwords):
+def validate_password(password):
+    expected_password = r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$])[A-Za-z0-9@#$].{6,16}$"
+    if re.search(expected_password, password):
+        return True
+
+
+def find_invalid_passwords(passwords):
     incorrect_passwords = set()
     for password in passwords:
-        if (6 <= len(password) <= 16 and
-                re.search(r'\d+', password) and
-                re.search(r'[a-z]+', password) and
-                re.search(r'[A-Z]+', password) and
-                re.search(r'\W+', password) and not
-                re.search(r'\s+', password)):
+        if validate_password(password):
             continue
         incorrect_passwords.add(password)
 
-    return (f"Passwords {incorrect_passwords} are incorrect.\n"
+    return (f"Passwords {incorrect_passwords} are invalid.\n"
             f"Password should be greater than 6 characters and less than 16 characters.\n"
             f"Password should contain at least 1 digit.\n"
             f"Password should contain at least 1 lower case letter.\n"
             f"Password should contain at least 1 upper case letter.\n"
-            f"Password should contain at least 1 special character.\n")
+            f"Password should contain at least 1 of $@# special character.\n")
 
 
-print(check_passwords(get_passwords()))
+print(find_invalid_passwords(get_passwords()))
