@@ -21,6 +21,12 @@ def get_passwords():
     return passwords
 
 
+def set_passwords():
+    with open(DATA_FILE, mode="a") as file:
+        new_passwords = generate_passwords()
+        csvfile = csv.writer(file)
+        csvfile.writerow('user' + ',' + new_passwords)
+
 def validate_password(password):
     expected_password = r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$])[A-Za-z0-9@#$].{6,16}$"
     if re.search(expected_password, password):
@@ -42,22 +48,31 @@ def find_invalid_passwords(passwords):
             f"Password should contain at least 1 of $@# special character.\n")
 
 
-def generate_new_password():
-    combination = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation
+def generate_new_creds():
+    password_combination = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation
+    username_combination = string.ascii_lowercase
+    new_username = ""
     new_password = ""
+    new_creds = {}
     for i in range(6, 16):
-        new_password += combination[secrets.randbelow(len(combination))]
+        new_username += username_combination[secrets.randbelow(len(username_combination))]
+        new_password += password_combination[secrets.randbelow(len(password_combination))]
+    new_creds.update({"username": new_username, "password": new_password})
+    print(new_creds)
+
     return new_password
 
 
 def generate_passwords():
     random_passwords = set()
     for i in range(10):
-        random_password = generate_new_password()
+        random_password = generate_new_creds()
         random_passwords.add(random_password)
     return random_passwords
 
 
 print(find_invalid_passwords(get_passwords()))
 print(find_invalid_passwords(generate_passwords()))
+
+set_passwords()
 
