@@ -10,7 +10,7 @@ def logger_with_arguments(outer_message, start_message, finish_message):
             start_time = perf_counter()
             print(start_message)
             print(f"The arguments are: {args}")
-            print(fun(*args, **kwargs))
+            print(f"result:\n{fun(*args, **kwargs)}")
             print(f"{finish_message} in {(perf_counter() - start_time): .6f} seconds")
 
         return wrapper_accepting_arguments
