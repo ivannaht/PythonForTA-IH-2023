@@ -25,5 +25,7 @@ def verify_arithmetic_operators(a, b):
 
 try:
     verify_arithmetic_operators(input_a, input_b)
-except ValueError as e:
+except NegativeValueError as e:
+    print(e)
+except ZeroDivisionError as e:
     print(e)
