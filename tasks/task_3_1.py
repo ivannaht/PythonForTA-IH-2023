@@ -1,14 +1,18 @@
 """ task 3_1"""
 from helpers.custom_exceptions import BigNumberError
+from helpers.logger import logger_with_arguments
 
 
 def calculate_cubes_sum(numbers):
+    """function for calculating cubes of integer numbers"""
     cubes_sum = 0
     for number in numbers:
         cubes_sum += pow(int(number), 3)
     return cubes_sum
 
 
+@logger_with_arguments("logger for function",
+                       "started", "finished")
 def convert(str_main, n) -> str:
     """convert function for strings"""
     if not isinstance(n, int):
@@ -35,4 +39,4 @@ def convert(str_main, n) -> str:
     return result
 
 
-print(convert("123456987654", 6))
+convert("123456987654", 6)

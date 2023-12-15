@@ -13,6 +13,7 @@ DATA_FILE = BASE_DIR.joinpath(assetsDirectory).joinpath(credsFile)
 
 
 def get_passwords():
+    """function for reading passwords from CSV file"""
     with open(DATA_FILE, mode="r") as file:
         reader = csv.reader(file)
         # skip the first row with table headers
@@ -23,6 +24,7 @@ def get_passwords():
 
 
 def set_passwords():
+    """function for writing passwords in CSV file"""
     with open(DATA_FILE, mode="a") as file:
         writer = csv.writer(file)
         new_creds = generate_new_creds()
@@ -30,12 +32,14 @@ def set_passwords():
 
 
 def validate_password(password):
+    """function for password validation"""
     expected_password = r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$])[A-Za-z0-9@#$].{6,16}$"
     if re.search(expected_password, password):
         return True
 
 
 def find_invalid_passwords(passwords):
+    """function for finding of invalid passwords"""
     invalid_passwords = set()
     for password in passwords:
         if validate_password(password):
@@ -51,6 +55,7 @@ def find_invalid_passwords(passwords):
 
 
 def generate_new_creds():
+    """function for generating the username and password (valid or invalid)"""
     password_combination = (string.ascii_lowercase + string.ascii_uppercase + string.digits
                             + string.punctuation.replace(",",""))
     username_combination = string.ascii_lowercase
@@ -65,6 +70,7 @@ def generate_new_creds():
 
 
 def generate_passwords():
+    """function for generating set of passwords (valid or invalid)"""
     random_passwords = set()
     for i in range(10):
         random_password = generate_new_creds()[1]

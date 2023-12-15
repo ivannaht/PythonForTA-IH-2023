@@ -1,10 +1,14 @@
 from helpers.custom_exceptions import NegativeValueError
+from helpers.logger import logger_with_arguments
 
 input_a = float(input("Please enter the first number\n"))
 input_b = float(input("Please enter the second number\n"))
 
 
+@logger_with_arguments("logger for function",
+                       "started", "finished")
 def verify_arithmetic_operators(a, b):
+    """function for verifying arithmetic operators """
     if b < 0:
         raise NegativeValueError(b)
     if b == 0:
@@ -16,12 +20,12 @@ def verify_arithmetic_operators(a, b):
               f"a ** b = {a ** b}\n"
               f"a // b = {a // b}\n"
               f"a % b = {a % b}\n")
-    print(result)
+    return result
 
 
 try:
     verify_arithmetic_operators(input_a, input_b)
-except ValueError as e:
+except NegativeValueError as e:
     print(e)
-finally:
-    print("verify_arithmetic_operators() function was run")
+except ZeroDivisionError as e:
+    print(e)
