@@ -4,6 +4,7 @@ from helpers.logger import logger_with_arguments
 
 
 def calculate_cubes_sum(numbers):
+    """function for calculating cubes of integer numbers"""
     cubes_sum = 0
     for number in numbers:
         cubes_sum += pow(int(number), 3)

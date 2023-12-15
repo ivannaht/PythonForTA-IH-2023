@@ -8,6 +8,7 @@ input_b = float(input("Please enter the second number\n"))
 @logger_with_arguments("logger for function",
                        "started", "finished")
 def verify_arithmetic_operators(a, b):
+    """function for verifying arithmetic operators """
     if b < 0:
         raise NegativeValueError(b)
     if b == 0:
