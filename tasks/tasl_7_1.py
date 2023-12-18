@@ -1,6 +1,7 @@
 import json
 from collections import namedtuple
 from pathlib import Path
+import random
 
 jsonFile = "geometric_shapes.json"
 assetsDirectory = "assets"
@@ -10,34 +11,44 @@ DATA_FILE = BASE_DIR.joinpath(assetsDirectory).joinpath(jsonFile)
 
 
 def convert_dict_to_namedtuple(d):
+    """function for """
     return namedtuple('Item', d.keys())(**d)
 
 
-def get_item():
+def get_items():
     """function for reading items from JSON file"""
-    input_id = input("Please select item by id\n")
     with open(DATA_FILE, mode="r") as file:
-        data = json.load(file)
-        for i in data:
-            item = convert_dict_to_namedtuple(i)
-            if str(item.id) == input_id:
-                print(f"You selected {item.color} {item.name} from {item.material}")
-            else:
-                print(f"The item with {item.id} does not exist")
+        return json.load(file)
+
+
+data = get_items()
 
 
 def set_items():
     """function for writing items in JSON file"""
-    with open(DATA_FILE, mode="a") as file:
-        # data = json.load(file)
-        # print(data)
+    with open(DATA_FILE, mode="w") as file:
         new_item = generate_new_item()
-        # data.append(new_item)
-        json.dump(new_item, file)
+        data.append(new_item)
+        json.dump(data, file, indent=4, separators=(',', ': '))
 
 
 def generate_new_item():
-    return dict(id=5, name="sphere", type="3D", radius=4, material="glass", color="green")
+    """function"""
+    colors_list = ["green", "blue", "red", "pink"]
+    color = random.choice(colors_list)
+    materials_list = ["wood", "glass", "paper", "metal"]
+    material = random.choice(materials_list)
+    return dict(id= len(data) + 1, name="sphere", type="3D", radius=2, material=material, color=color)
+
+
+def select_item():
+    """function"""
+    input_id = input("Please select item by id\n")
+    for i in data:
+        item = convert_dict_to_namedtuple(i)
+        if str(item.id) == input_id:
+            return f"You selected {item.color} {item.name} from {item.material}"
 
 
 set_items()
+print(select_item())

@@ -1,49 +1,137 @@
 [
-  {
-    "id": 1,
-    "name": "rectangle",
-    "type": "2D",
-    "sides": {
-      "length": 5,
-      "width": 2
+    {
+        "id": 1,
+        "name": "rectangle",
+        "type": "2D",
+        "sides": {
+            "length": 5,
+            "width": 2
+        },
+        "material": "plastic",
+        "color": "red"
     },
-    "material": "plastic",
-    "color": "red"
-  },
-  {
-    "id": 2,
-    "name": "triangle",
-    "type": "2D",
-    "sides": {
-      "a": 5,
-      "b": 2,
-      "c": 3
+    {
+        "id": 2,
+        "name": "triangle",
+        "type": "2D",
+        "sides": {
+            "a": 5,
+            "b": 2,
+            "c": 3
+        },
+        "material": "wood",
+        "color": "blue"
     },
-    "material": "wood",
-    "color": "blue"
-  },
-  {
-    "id": 3,
-    "name": "circle",
-    "type": "2D",
-    "radius": 5,
-    "material": "paper",
-    "color": "white"
-  },
-  {
-    "id": 4,
-    "name": "cube",
-    "type": "3D",
-    "side": 2,
-    "material": "metal",
-    "color": "black"
-  },
-  {
-    "id": 5,
-    "name": "sphere",
-    "type": "3D",
-    "radius": 4,
-    "material": "glass",
-    "color": "pink"
-  }
+    {
+        "id": 3,
+        "name": "circle",
+        "type": "2D",
+        "radius": 5,
+        "material": "paper",
+        "color": "white"
+    },
+    {
+        "id": 4,
+        "name": "cube",
+        "type": "3D",
+        "side": 2,
+        "material": "metal",
+        "color": "black"
+    },
+    {
+        "id": 5,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 4,
+        "material": "glass",
+        "color": "pink"
+    },
+    {
+        "id": 6,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "metal",
+        "color": "red"
+    },
+    {
+        "id": 7,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "metal",
+        "color": "green"
+    },
+    {
+        "id": 8,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "paper",
+        "color": "green"
+    },
+    {
+        "id": 9,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "metal",
+        "color": "red"
+    },
+    {
+        "id": 10,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "wood",
+        "color": "blue"
+    },
+    {
+        "id": 11,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "wood",
+        "color": "red"
+    },
+    {
+        "id": 12,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "metal",
+        "color": "blue"
+    },
+    {
+        "id": 13,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "metal",
+        "color": "blue"
+    },
+    {
+        "id": 14,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "metal",
+        "color": "green"
+    },
+    {
+        "id": 15,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "paper",
+        "color": "blue"
+    },
+    {
+        "id": 16,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "paper",
+        "color": "red"
+    }
 ]
