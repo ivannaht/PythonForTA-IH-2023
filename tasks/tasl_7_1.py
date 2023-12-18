@@ -38,7 +38,10 @@ def generate_new_item():
     color = random.choice(colors_list)
     materials_list = ["wood", "glass", "paper", "metal"]
     material = random.choice(materials_list)
-    return dict(id= len(data) + 1, name="sphere", type="3D", radius=2, material=material, color=color)
+    radius = random.randint(1, 9)
+    figure_list = [{"name": "sphere", "type": "3D"}, {"name": "circle", "type": "2D"}]
+    figure = random.choice(figure_list)
+    return dict(id = len(data) + 1, name = figure["name"], type = figure["type"], radius = radius, material = material, color = color)
 
 
 def select_item():

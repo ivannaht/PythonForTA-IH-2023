@@ -133,5 +133,29 @@
         "radius": 2,
         "material": "paper",
         "color": "red"
+    },
+    {
+        "id": 17,
+        "name": "circle",
+        "type": "2D",
+        "radius": 2,
+        "material": "glass",
+        "color": "green"
+    },
+    {
+        "id": 18,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 8,
+        "material": "wood",
+        "color": "green"
+    },
+    {
+        "id": 19,
+        "name": "circle",
+        "type": "2D",
+        "radius": 8,
+        "material": "wood",
+        "color": "pink"
     }
 ]
