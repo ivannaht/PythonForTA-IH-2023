@@ -26,7 +26,9 @@ class User:
             raise ValueError("age must be a number")
         if int(self.age) < min_age:
             raise InsufficientAgeError(self.age, min_age)
-        return f"HELLO, {self.name.upper()}! YOUR AGE IS {int(self.age)}. YOU LIVE IN {self.city.upper()}."
+        return (f"HELLO, {self.name.upper()}! "
+                f"YOUR AGE IS {int(self.age)}. "
+                f"YOU LIVE IN {self.city.upper()}.")
 
 
 user1 = User("Anna", "25", "London")
