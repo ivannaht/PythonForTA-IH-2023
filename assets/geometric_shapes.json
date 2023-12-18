@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "name": "rectangle",
+    "type": "2D",
+    "sides": {
+      "length": 5,
+      "width": 2
+    },
+    "material": "plastic",
+    "color": "red"
+  },
+  {
+    "id": 2,
+    "name": "triangle",
+    "type": "2D",
+    "sides": {
+      "a": 5,
+      "b": 2,
+      "c": 3
+    },
+    "material": "wood",
+    "color": "blue"
+  },
+  {
+    "id": 3,
+    "name": "circle",
+    "type": "2D",
+    "radius": 5,
+    "material": "paper",
+    "color": "white"
+  },
+  {
+    "id": 4,
+    "name": "cube",
+    "type": "3D",
+    "side": 2,
+    "material": "metal",
+    "color": "black"
+  },
+  {
+    "id": 5,
+    "name": "sphere",
+    "type": "3D",
+    "radius": 4,
+    "material": "glass",
+    "color": "pink"
+  }
+]
