@@ -1,7 +1,7 @@
 import pytest
 
 from helpers.custom_exceptions import InsufficientAgeError, EmptyValueError
-from tasks.task_1_1 import show_user_info
+from tasks.task_1_1 import User
 
 data = [
     ("first", "5", "second", InsufficientAgeError),
@@ -16,4 +16,5 @@ data = [
 def test_show_user_info_with_exceptions(name, age, city, e):
     """verify show_user_info function"""
     with pytest.raises(e):
-        show_user_info(name, age, city)
+        user = User(name, age, city)
+        user.show_user_info()

@@ -25,7 +25,8 @@ class User:
 
 
 user1 = User("Anna", "25", "London")
+print(user1.show_user_info())
+
 user2 = User("", "", "")
 user2.get_data()
-print(user1.show_user_info())
 print(user2.show_user_info())
