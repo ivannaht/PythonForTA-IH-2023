@@ -11,8 +11,8 @@ DATA_FILE = BASE_DIR.joinpath(assetsDirectory).joinpath(jsonFile)
 
 
 def convert_dict_to_namedtuple(d):
-    """function for """
-    return namedtuple('item', d.keys())(**d)
+    """function to create tuple-like objects with named fields and fixed length"""
+    return namedtuple('Item', d.keys())(**d)
 
 
 def get_items():
@@ -33,7 +33,7 @@ def set_items():
 
 
 def generate_new_item():
-    """function"""
+    """function for generating new item"""
     colors_list = ["green", "blue", "red", "pink"]
     color = random.choice(colors_list)
     materials_list = ["wood", "glass", "paper", "metal"]
@@ -45,7 +45,7 @@ def generate_new_item():
 
 
 def select_item():
-    """function"""
+    """function selecting item from JSON file by id"""
     input_id = input("Please select item by id\n")
     for i in data:
         item = convert_dict_to_namedtuple(i)

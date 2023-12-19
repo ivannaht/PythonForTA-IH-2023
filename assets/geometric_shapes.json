@@ -197,5 +197,29 @@
         "radius": 3,
         "material": "glass",
         "color": "pink"
+    },
+    {
+        "id": 25,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "wood",
+        "color": "green"
+    },
+    {
+        "id": 26,
+        "name": "circle",
+        "type": "2D",
+        "radius": 1,
+        "material": "paper",
+        "color": "red"
+    },
+    {
+        "id": 27,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "glass",
+        "color": "blue"
     }
 ]
