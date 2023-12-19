@@ -157,5 +157,45 @@
         "radius": 8,
         "material": "wood",
         "color": "pink"
+    },
+    {
+        "id": 20,
+        "name": "circle",
+        "type": "2D",
+        "radius": 4,
+        "material": "metal",
+        "color": "red"
+    },
+    {
+        "id": 21,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 6,
+        "material": "paper",
+        "color": "red"
+    },
+    {
+        "id": 22,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 4,
+        "material": "paper",
+        "color": "red"
+    },
+    {
+        "id": 23,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 5,
+        "material": "paper",
+        "color": "blue"
+    },
+    {
+        "id": 24,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 3,
+        "material": "glass",
+        "color": "pink"
     }
 ]

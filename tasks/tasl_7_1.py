@@ -12,7 +12,7 @@ DATA_FILE = BASE_DIR.joinpath(assetsDirectory).joinpath(jsonFile)
 
 def convert_dict_to_namedtuple(d):
     """function for """
-    return namedtuple('Item', d.keys())(**d)
+    return namedtuple('item', d.keys())(**d)
 
 
 def get_items():
