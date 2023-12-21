@@ -221,5 +221,133 @@
         "radius": 2,
         "material": "glass",
         "color": "blue"
+    },
+    {
+        "id": 28,
+        "name": "circle",
+        "type": "2D",
+        "radius": 3,
+        "material": "wood",
+        "color": "blue"
+    },
+    {
+        "id": 29,
+        "name": "circle",
+        "type": "2D",
+        "radius": 1,
+        "material": "wood",
+        "color": "pink"
+    },
+    {
+        "id": 30,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 4,
+        "material": "metal",
+        "color": "green"
+    },
+    {
+        "id": 31,
+        "name": "circle",
+        "type": "2D",
+        "radius": 6,
+        "material": "paper",
+        "color": "blue"
+    },
+    {
+        "id": 32,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 6,
+        "material": "glass",
+        "color": "blue"
+    },
+    {
+        "id": 33,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 7,
+        "material": "wood",
+        "color": "blue"
+    },
+    {
+        "id": 34,
+        "name": "circle",
+        "type": "2D",
+        "radius": 8,
+        "material": "glass",
+        "color": "green"
+    },
+    {
+        "id": 35,
+        "name": "circle",
+        "type": "2D",
+        "radius": 6,
+        "material": "metal",
+        "color": "blue"
+    },
+    {
+        "id": 36,
+        "name": "circle",
+        "type": "2D",
+        "radius": 8,
+        "material": "wood",
+        "color": "blue"
+    },
+    {
+        "id": 37,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 8,
+        "material": "wood",
+        "color": "pink"
+    },
+    {
+        "id": 38,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "metal",
+        "color": "pink"
+    },
+    {
+        "id": 39,
+        "name": "circle",
+        "type": "2D",
+        "radius": 1,
+        "material": "metal",
+        "color": "pink"
+    },
+    {
+        "id": 40,
+        "name": "circle",
+        "type": "2D",
+        "radius": 6,
+        "material": "paper",
+        "color": "pink"
+    },
+    {
+        "id": 41,
+        "name": "circle",
+        "type": "2D",
+        "radius": 9,
+        "material": "wood",
+        "color": "red"
+    },
+    {
+        "id": 42,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 8,
+        "material": "glass",
+        "color": "blue"
+    },
+    {
+        "id": 43,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "paper",
+        "color": "pink"
     }
 ]
