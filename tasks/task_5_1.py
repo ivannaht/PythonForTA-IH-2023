@@ -33,8 +33,8 @@ def set_passwords():
 
 def validate_password(password):
     """function for password validation"""
-    expected_password = r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$])[A-Za-z0-9@#$].{6,16}$"
-    if re.search(expected_password, password):
+    password_pattern = r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$])[A-Za-z0-9@#$].{6,16}$"
+    if re.search(password_pattern, password):
         return True
 
 
