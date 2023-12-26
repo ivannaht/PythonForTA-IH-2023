@@ -9,10 +9,8 @@ class JsonFileEditor:
 
     def __init__(self, json_file="geometric_shapes.json", directory="assets"):
         """Constructor for user"""
-        self.json_file = json_file
-        self.directory = directory
-        self.base_dir = Path(__file__).resolve().parent.parent
-        self.data_file = self.base_dir.joinpath(self.directory).joinpath(self.json_file)
+        base_dir = Path(__file__).resolve().parent.parent
+        self.data_file = base_dir.joinpath(directory).joinpath(json_file)
         self.data = self.get_items
 
     @property
@@ -22,15 +20,14 @@ class JsonFileEditor:
             return json.load(file)
 
     def generate_new_item(self):
-        pass
+        raise ValueError("The item should be generated in Child class")
 
-    def set_items(self):
+    def add_item(self):
         """function for writing items in JSON file"""
-        data = self.get_items
         with open(self.data_file, mode="w") as file:
             new_item = self.generate_new_item()
-            data.append(new_item)
-            json.dump(data, file, indent=4)
+            self.data.append(new_item)
+            json.dump(self.data, file, indent=4)
 
 
 class GeometricShapesFileEditor(JsonFileEditor):

@@ -1,7 +1,7 @@
 from tasks.task_7_1 import GeometricShapesFileEditor
 
 file_1 = GeometricShapesFileEditor("geometric_shapes.json", "assets")
-file_1.set_items()
+file_1.add_item()
 
 print(file_1.data)
 print(file_1.select_item("1"))

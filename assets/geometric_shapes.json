@@ -349,5 +349,109 @@
         "radius": 2,
         "material": "paper",
         "color": "pink"
+    },
+    {
+        "id": 44,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 7,
+        "material": "glass",
+        "color": "green"
+    },
+    {
+        "id": 45,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "paper",
+        "color": "pink"
+    },
+    {
+        "id": 46,
+        "name": "circle",
+        "type": "2D",
+        "radius": 6,
+        "material": "glass",
+        "color": "pink"
+    },
+    {
+        "id": 47,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 7,
+        "material": "metal",
+        "color": "red"
+    },
+    {
+        "id": 48,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 8,
+        "material": "glass",
+        "color": "red"
+    },
+    {
+        "id": 49,
+        "name": "circle",
+        "type": "2D",
+        "radius": 8,
+        "material": "glass",
+        "color": "blue"
+    },
+    {
+        "id": 50,
+        "name": "circle",
+        "type": "2D",
+        "radius": 1,
+        "material": "paper",
+        "color": "red"
+    },
+    {
+        "id": 51,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 8,
+        "material": "wood",
+        "color": "blue"
+    },
+    {
+        "id": 52,
+        "name": "circle",
+        "type": "2D",
+        "radius": 7,
+        "material": "metal",
+        "color": "green"
+    },
+    {
+        "id": 53,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 3,
+        "material": "metal",
+        "color": "green"
+    },
+    {
+        "id": 54,
+        "name": "circle",
+        "type": "2D",
+        "radius": 4,
+        "material": "paper",
+        "color": "blue"
+    },
+    {
+        "id": 55,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 6,
+        "material": "paper",
+        "color": "green"
+    },
+    {
+        "id": 56,
+        "name": "circle",
+        "type": "2D",
+        "radius": 2,
+        "material": "glass",
+        "color": "green"
     }
 ]
