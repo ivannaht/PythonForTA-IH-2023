@@ -6,7 +6,7 @@ class CsvFileEditor:
     """Parent class for reading and modifying CSV file"""
 
     def __init__(self, csv_file="creds.csv", directory="assets"):
-        """Constructor for user"""
+        """Constructor for CSV file"""
         base_dir = Path(__file__).resolve().parent.parent
         self.data_file = base_dir.joinpath(directory).joinpath(csv_file)
         self.data = self.get_data
@@ -23,6 +23,7 @@ class CsvFileEditor:
         return data
 
     def generate_new_data(self):
+        """function for generating new data for CSV file"""
         raise NotImplementedError("Child class must implement this abstract method")
 
     def add_data(self):

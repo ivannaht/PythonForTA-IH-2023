@@ -477,5 +477,13 @@
         "radius": 2,
         "material": "glass",
         "color": "red"
+    },
+    {
+        "id": 60,
+        "name": "circle",
+        "type": "2D",
+        "radius": 9,
+        "material": "paper",
+        "color": "blue"
     }
 ]

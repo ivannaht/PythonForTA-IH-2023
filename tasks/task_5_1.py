@@ -5,15 +5,16 @@ from tasks.csv_file_editor import CsvFileEditor
 
 
 class CredsFileEditor(CsvFileEditor):
-    """Child class for reading and modifying CSV file """
+    """Child class for reading and modifying creds.csv file """
 
     def __init__(self, csv_file, directory):
+        """Constructor for creds.csv file"""
         super(self.__class__, self).__init__(csv_file, directory)
         self.passwords = self.get_passwords
 
     @property
     def get_passwords(self):
-        """function for reading passwords from CSV file"""
+        """function for reading passwords from creds.csv file"""
         passwords = []
         for creds in self.data:
             password = creds[1]
@@ -29,7 +30,7 @@ class CredsFileEditor(CsvFileEditor):
             return True
 
     def find_invalid_passwords(self):
-        """function for finding of invalid passwords"""
+        """function for finding of invalid passwords in creds.csv file"""
         invalid_passwords = set()
         for password in self.passwords:
             if self.validate_password(password):
@@ -42,7 +43,7 @@ class CredsFileEditor(CsvFileEditor):
                 f"1 of $@# special character.\n")
 
     def find_valid_passwords(self):
-        """function for finding of valid passwords"""
+        """function for finding of valid passwords in creds.csv file"""
         valid_passwords = set()
         for password in self.passwords:
             if self.validate_password(password):

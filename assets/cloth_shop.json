@@ -151,5 +151,22 @@
             "XL"
         ],
         "type": "male"
+    },
+    {
+        "id": 10,
+        "name": "Jacket",
+        "colors": [
+            "white",
+            "black",
+            "gray"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "type": "male"
     }
 ]

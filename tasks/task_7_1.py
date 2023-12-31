@@ -4,9 +4,10 @@ from tasks.json_file_editor import JsonFileEditor
 
 
 class GeometricShapesFileEditor(JsonFileEditor):
-    """Child class for reading and modifying JSON file """
+    """Child class for reading and modifying geometric_shapes.json file """
 
     def __init__(self, json_file, directory):
+        """Constructor for geometric_shapes.json file"""
         super(self.__class__, self).__init__(json_file, directory)
 
     @staticmethod
@@ -27,7 +28,7 @@ class GeometricShapesFileEditor(JsonFileEditor):
                     color=color)
 
     def select_item(self, input_id):
-        """function selecting item from JSON file by id"""
+        """function selecting item from geometric_shapes.json file by id"""
         for i in self.data:
             item = self.convert_dict_to_namedtuple(i)
             if str(item.id) == input_id:
