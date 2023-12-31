@@ -1,39 +1,13 @@
-import json
 from collections import namedtuple
-from pathlib import Path
 import random
-
-
-class JsonFileEditor:
-    """Parent class for reading and modifying JSON file"""
-
-    def __init__(self, json_file="geometric_shapes.json", directory="assets"):
-        """Constructor for user"""
-        base_dir = Path(__file__).resolve().parent.parent
-        self.data_file = base_dir.joinpath(directory).joinpath(json_file)
-        self.data = self.get_items
-
-    @property
-    def get_items(self):
-        """function for reading items from JSON file"""
-        with open(self.data_file) as file:
-            return json.load(file)
-
-    def generate_new_item(self):
-        raise ValueError("The item should be generated in Child class")
-
-    def add_item(self):
-        """function for writing items in JSON file"""
-        with open(self.data_file, mode="w") as file:
-            new_item = self.generate_new_item()
-            self.data.append(new_item)
-            json.dump(self.data, file, indent=4)
+from tasks.json_file_editor import JsonFileEditor
 
 
 class GeometricShapesFileEditor(JsonFileEditor):
-    """Child class for reading and modifying JSON file """
+    """Child class for reading and modifying geometric_shapes.json file """
 
     def __init__(self, json_file, directory):
+        """Constructor for geometric_shapes.json file"""
         super(self.__class__, self).__init__(json_file, directory)
 
     @staticmethod
@@ -54,8 +28,17 @@ class GeometricShapesFileEditor(JsonFileEditor):
                     color=color)
 
     def select_item(self, input_id):
-        """function selecting item from JSON file by id"""
+        """function selecting item from geometric_shapes.json file by id"""
         for i in self.data:
             item = self.convert_dict_to_namedtuple(i)
             if str(item.id) == input_id:
                 return f"You selected {item.color} {item.name} from {item.material}"
+
+
+file_1 = GeometricShapesFileEditor("geometric_shapes.json", "assets")
+print(file_1.generate_new_item())
+file_1.add_item()
+print(file_1.data)
+print(len(file_1.data))
+print(file_1.select_item("1"))
+print(file_1.select_item("40"))

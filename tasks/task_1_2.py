@@ -30,3 +30,6 @@ def show_user_arithmetic_operators():
         print(e)
     except ZeroDivisionError as e:
         print(e)
+
+
+# show_user_arithmetic_operators()
