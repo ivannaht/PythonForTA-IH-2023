@@ -461,5 +461,21 @@
         "radius": 8,
         "material": "metal",
         "color": "blue"
+    },
+    {
+        "id": 58,
+        "name": "circle",
+        "type": "2D",
+        "radius": 8,
+        "material": "paper",
+        "color": "pink"
+    },
+    {
+        "id": 59,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 2,
+        "material": "glass",
+        "color": "red"
     }
 ]

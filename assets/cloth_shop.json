@@ -83,5 +83,73 @@
             "XL"
         ],
         "type": "male"
+    },
+    {
+        "id": 6,
+        "name": "Jumper",
+        "colors": [
+            "white",
+            "black",
+            "gray"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "type": "femail"
+    },
+    {
+        "id": 7,
+        "name": "Jumper",
+        "colors": [
+            "white",
+            "black",
+            "gray"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "type": "femail"
+    },
+    {
+        "id": 8,
+        "name": "Jacket",
+        "colors": [
+            "white",
+            "black",
+            "gray"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "type": "male"
+    },
+    {
+        "id": 9,
+        "name": "T-shirt",
+        "colors": [
+            "white",
+            "black",
+            "gray"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "type": "male"
     }
 ]

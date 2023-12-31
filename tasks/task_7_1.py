@@ -32,3 +32,12 @@ class GeometricShapesFileEditor(JsonFileEditor):
             item = self.convert_dict_to_namedtuple(i)
             if str(item.id) == input_id:
                 return f"You selected {item.color} {item.name} from {item.material}"
+
+
+file_1 = GeometricShapesFileEditor("geometric_shapes.json", "assets")
+print(file_1.generate_new_item())
+file_1.add_item()
+print(file_1.data)
+print(len(file_1.data))
+print(file_1.select_item("1"))
+print(file_1.select_item("40"))

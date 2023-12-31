@@ -1,84 +1,75 @@
-import csv
 import re
 import secrets
 import string
-from pathlib import Path
+from tasks.csv_file_editor import CsvFileEditor
 
 
-credsFile = "creds.csv"
-assetsDirectory = "assets"
+class CredsFileEditor(CsvFileEditor):
+    """Child class for reading and modifying CSV file """
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_FILE = BASE_DIR.joinpath(assetsDirectory).joinpath(credsFile)
+    def __init__(self, csv_file, directory):
+        super(self.__class__, self).__init__(csv_file, directory)
+        self.passwords = self.get_passwords
 
+    @property
+    def get_passwords(self):
+        """function for reading passwords from CSV file"""
+        passwords = []
+        for creds in self.data:
+            password = creds[1]
+            passwords.append(password)
 
-def get_passwords():
-    """function for reading passwords from CSV file"""
-    with open(DATA_FILE, mode="r") as file:
-        reader = csv.reader(file)
-        # skip the first row with table headers
-        next(reader)
-        passwords = [tuple(row)[1] for row in reader]
+        return passwords
 
-    return passwords
+    @staticmethod
+    def validate_password(password):
+        """function for password validation"""
+        password_pattern = r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$])[A-Za-z0-9@#$].{6,16}$"
+        if re.search(password_pattern, password):
+            return True
 
+    def find_invalid_passwords(self):
+        """function for finding of invalid passwords"""
+        invalid_passwords = set()
+        for password in self.passwords:
+            if self.validate_password(password):
+                continue
+            invalid_passwords.add(password)
 
-def set_passwords():
-    """function for writing passwords in CSV file"""
-    with open(DATA_FILE, mode="a") as file:
-        writer = csv.writer(file)
-        new_creds = generate_new_creds()
-        writer.writerow(new_creds)
+        return (f"Passwords {invalid_passwords} are invalid.\n"
+                f"Password should be greater than 6 characters and less than 16 characters.\n"
+                f"Password should contain at least 1 digit, 1 lower case letter, 1 upper case letter, "
+                f"1 of $@# special character.\n")
 
+    def find_valid_passwords(self):
+        """function for finding of valid passwords"""
+        valid_passwords = set()
+        for password in self.passwords:
+            if self.validate_password(password):
+               valid_passwords.add(password)
 
-def validate_password(password):
-    """function for password validation"""
-    password_pattern = r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$])[A-Za-z0-9@#$].{6,16}$"
-    if re.search(password_pattern, password):
-        return True
+        return f"Passwords {valid_passwords} are valid.\n"
 
+    def generate_new_data(self):
+        """function for generating the username and password (valid or invalid)"""
+        password_combination = (string.ascii_lowercase + string.ascii_uppercase + string.digits
+                                + "@#$")
+        username_combination = string.ascii_lowercase
+        new_username = "user"
+        new_password = ""
+        for i in range(6, 16):
+            new_username += username_combination[secrets.randbelow(len(username_combination))]
+            new_password += password_combination[secrets.randbelow(len(password_combination))]
+        new_creds = [new_username, new_password]
 
-def find_invalid_passwords(passwords):
-    """function for finding of invalid passwords"""
-    invalid_passwords = set()
-    for password in passwords:
-        if validate_password(password):
-            continue
-        invalid_passwords.add(password)
-
-    return (f"Passwords {invalid_passwords} are invalid.\n"
-            f"Password should be greater than 6 characters and less than 16 characters.\n"
-            f"Password should contain at least 1 digit.\n"
-            f"Password should contain at least 1 lower case letter.\n"
-            f"Password should contain at least 1 upper case letter.\n"
-            f"Password should contain at least 1 of $@# special character.\n")
-
-
-def generate_new_creds():
-    """function for generating the username and password (valid or invalid)"""
-    password_combination = (string.ascii_lowercase + string.ascii_uppercase + string.digits
-                            + string.punctuation.replace(",",""))
-    username_combination = string.ascii_lowercase
-    new_username = "user"
-    new_password = ""
-    for i in range(6, 16):
-        new_username += username_combination[secrets.randbelow(len(username_combination))]
-        new_password += password_combination[secrets.randbelow(len(password_combination))]
-    new_creds = [new_username, new_password]
-
-    return new_creds
+        return new_creds
 
 
-def generate_passwords():
-    """function for generating set of passwords (valid or invalid)"""
-    random_passwords = set()
-    for i in range(10):
-        random_password = generate_new_creds()[1]
-        random_passwords.add(random_password)
-
-    return random_passwords
-
-
-set_passwords()
-print(find_invalid_passwords(get_passwords()))
-print(find_invalid_passwords(generate_passwords()))
+file_creds = CredsFileEditor("creds.csv", "assets")
+print(file_creds.generate_new_data())
+file_creds.add_data()
+print(file_creds.data)
+print(len(file_creds.data))
+print(file_creds.passwords)
+print(file_creds.find_invalid_passwords())
+print(file_creds.find_valid_passwords())
