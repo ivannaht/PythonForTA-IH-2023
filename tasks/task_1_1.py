@@ -7,9 +7,9 @@ from helpers.custom_exceptions import InsufficientAgeError, EmptyValueError
 class User:
     """Class for user"""
 
-    def __init__(self, name, age, city, phone="+1 (123) 456-7890"):
+    def __init__(self, name, age, city, phone="+1 (000) 000-0000"):
         """Constructor for user"""
-        self.validate_user_info(name, city, age)
+        self.validate_user_info(name, age, city, phone)
         self.name = name
         self.age = age
         self.city = city
@@ -23,16 +23,19 @@ class User:
         self.phone = input("WHAT IS YOUR PHONE NUMBER?\n")
 
     @staticmethod
-    def validate_user_info(name, city, age):
+    def validate_user_info(name, age, city, phone):
         """validate user info using regular expressions"""
         min_age = 18
-        pattern = re.compile(r"^([a-z]+)([-'][a-z]+)*(\-[a-z]+)?(( [a-z]+)?([-'][a-z]+)*){0,3}[a-z]*$", re.IGNORECASE)
+        name_city_pattern = re.compile(r"^([a-z]+)([-'][a-z]+)*(\-[a-z]+)?(( [a-z]+)?([-'][a-z]+)*){0,3}[a-z]*$", re.IGNORECASE)
+        phone_pattern = re.compile(r"^\+\d{1,3}[-\s]?\(?\d{1,3}\)?[-\s]?\d{1,3}?[-\s]?\d{1,4}$")
         if name == "" or city == "" or age == "":
             raise EmptyValueError
-        if not pattern.search(name):
+        if not name_city_pattern.search(name):
             raise ValueError("name must include only letters, spaces, apostrophes, or hyphens")
-        if not pattern.search(city):
+        if not name_city_pattern.search(city):
             raise ValueError("city must include only letters, spaces, apostrophes, or hyphens")
+        if not phone_pattern.search(phone):
+            raise ValueError("phone number can include plus sign, 11 digits, brackets, spaces, hyphens")
         if not age.isdigit():
             raise ValueError("age must be a number")
         if int(age) < min_age:
@@ -47,7 +50,7 @@ class User:
                 f"YOUR PHONE NUMBER IS {self.phone}.")
 
 
-user1 = User("Anna", "25", "London")
+user1 = User("Anna", "25", "London", "+1(012)3456789")
 print(user1.show_user_info())
 
 user2 = User("a", "18", "b")
