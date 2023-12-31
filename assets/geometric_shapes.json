@@ -453,5 +453,13 @@
         "radius": 2,
         "material": "glass",
         "color": "green"
+    },
+    {
+        "id": 57,
+        "name": "sphere",
+        "type": "3D",
+        "radius": 8,
+        "material": "metal",
+        "color": "blue"
     }
 ]
