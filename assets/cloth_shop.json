@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "name": "T-shirt",
+        "colors": [
+            "white",
+            "black",
+            "gray"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "type": "male"
+    },
+    {
+        "id": 2,
+        "name": "Skirt",
+        "colors": [
+            "red",
+            "black",
+            "blue"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "type": "female"
+    },
+    {
+        "id": 3,
+        "name": "Dress",
+        "colors": [
+            "red",
+            "black",
+            "white"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "type": "female"
+    },
+    {
+        "id": 4,
+        "name": "Trousers",
+        "colors": [
+            "white",
+            "black",
+            "gray"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "type": "male"
+    },
+    {
+        "id": 5,
+        "name": "Jacket",
+        "colors": [
+            "white",
+            "black",
+            "gray"
+        ],
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "type": "male"
+    }
+]
