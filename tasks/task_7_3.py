@@ -31,7 +31,3 @@ class Shops(ClothShopFileEditor):
                                 f"that costs {item.price}$. There are(is) {item.availability[a].quantity} item(s) in our shop.")
 
         return "Unfortunately, there is no such item in our shop."
-
-
-shop1 = Shops("cloth_shop.json", "assets")
-print(shop1.select_item_as_dataclass("Skirt", "red", "S"))

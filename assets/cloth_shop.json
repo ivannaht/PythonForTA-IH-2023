@@ -1,108 +1,320 @@
 [
-  {
-    "id": 1,
-    "name": "Skirt",
-    "type": "female",
-    "price": 50,
-    "availability": [
-      {
-        "color": "red",
-        "size": "S",
-        "quantity": 3
-      },
-      {
-        "color": "red",
-        "size": "M",
-        "quantity": 0
-      },
-      {
-        "color": "red",
-        "size": "L",
-        "quantity": 1
-      },
-      {
-        "color": "black",
-        "size": "S",
-        "quantity": 5
-      },
-      {
-        "color": "black",
-        "size": "M",
-        "quantity": 4
-      },
-      {
-        "color": "black",
-        "size": "L",
-        "quantity": 2
-      },
-      {
-        "color": "blue",
-        "size": "S",
-        "quantity": 4
-      },
-      {
-        "color": "blue",
-        "size": "M",
-        "quantity": 2
-      },
-      {
-        "color": "blue",
-        "size": "L",
-        "quantity": 1
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Dress",
-    "type": "female",
-    "price": 89,
-    "availability": [
-      {
-        "color": "red",
-        "size": "S",
-        "quantity": 3
-      },
-      {
-        "color": "red",
-        "size": "M",
-        "quantity": 0
-      },
-      {
-        "color": "red",
-        "size": "L",
-        "quantity": 1
-      },
-      {
-        "color": "black",
-        "size": "S",
-        "quantity": 5
-      },
-      {
-        "color": "black",
-        "size": "M",
-        "quantity": 4
-      },
-      {
-        "color": "black",
-        "size": "L",
-        "quantity": 2
-      },
-      {
-        "color": "blue",
-        "size": "S",
-        "quantity": 4
-      },
-      {
-        "color": "blue",
-        "size": "M",
-        "quantity": 0
-      },
-      {
-        "color": "blue",
-        "size": "L",
-        "quantity": 1
-      }
-    ]
-  }
+    {
+        "id": 1,
+        "name": "Skirt",
+        "type": "female",
+        "price": 50,
+        "availability": [
+            {
+                "color": "red",
+                "size": "S",
+                "quantity": 3
+            },
+            {
+                "color": "red",
+                "size": "M",
+                "quantity": 0
+            },
+            {
+                "color": "red",
+                "size": "L",
+                "quantity": 1
+            },
+            {
+                "color": "black",
+                "size": "S",
+                "quantity": 5
+            },
+            {
+                "color": "black",
+                "size": "M",
+                "quantity": 4
+            },
+            {
+                "color": "black",
+                "size": "L",
+                "quantity": 2
+            },
+            {
+                "color": "blue",
+                "size": "S",
+                "quantity": 4
+            },
+            {
+                "color": "blue",
+                "size": "M",
+                "quantity": 2
+            },
+            {
+                "color": "blue",
+                "size": "L",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Dress",
+        "type": "female",
+        "price": 89,
+        "availability": [
+            {
+                "color": "red",
+                "size": "S",
+                "quantity": 3
+            },
+            {
+                "color": "red",
+                "size": "M",
+                "quantity": 0
+            },
+            {
+                "color": "red",
+                "size": "L",
+                "quantity": 1
+            },
+            {
+                "color": "black",
+                "size": "S",
+                "quantity": 5
+            },
+            {
+                "color": "black",
+                "size": "M",
+                "quantity": 4
+            },
+            {
+                "color": "black",
+                "size": "L",
+                "quantity": 2
+            },
+            {
+                "color": "blue",
+                "size": "S",
+                "quantity": 4
+            },
+            {
+                "color": "blue",
+                "size": "M",
+                "quantity": 0
+            },
+            {
+                "color": "blue",
+                "size": "L",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "T-shirt",
+        "type": "femail",
+        "price": 43,
+        "availability": [
+            {
+                "color": "red",
+                "size": "S",
+                "quantity": 5
+            },
+            {
+                "color": "red",
+                "size": "M",
+                "quantity": 2
+            },
+            {
+                "color": "red",
+                "size": "L",
+                "quantity": 3
+            },
+            {
+                "color": "black",
+                "size": "S",
+                "quantity": 3
+            },
+            {
+                "color": "black",
+                "size": "M",
+                "quantity": 4
+            },
+            {
+                "color": "black",
+                "size": "L",
+                "quantity": 4
+            },
+            {
+                "color": "blue",
+                "size": "S",
+                "quantity": 3
+            },
+            {
+                "color": "blue",
+                "size": "M",
+                "quantity": 6
+            },
+            {
+                "color": "blue",
+                "size": "L",
+                "quantity": 5
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Hoodie",
+        "type": "femail",
+        "price": 41,
+        "availability": [
+            {
+                "color": "red",
+                "size": "S",
+                "quantity": 8
+            },
+            {
+                "color": "red",
+                "size": "M",
+                "quantity": 4
+            },
+            {
+                "color": "red",
+                "size": "L",
+                "quantity": 5
+            },
+            {
+                "color": "black",
+                "size": "S",
+                "quantity": 5
+            },
+            {
+                "color": "black",
+                "size": "M",
+                "quantity": 5
+            },
+            {
+                "color": "black",
+                "size": "L",
+                "quantity": 6
+            },
+            {
+                "color": "blue",
+                "size": "S",
+                "quantity": 0
+            },
+            {
+                "color": "blue",
+                "size": "M",
+                "quantity": 3
+            },
+            {
+                "color": "blue",
+                "size": "L",
+                "quantity": 5
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "T-shirt",
+        "type": "femail",
+        "price": 96,
+        "availability": [
+            {
+                "color": "red",
+                "size": "S",
+                "quantity": 9
+            },
+            {
+                "color": "red",
+                "size": "M",
+                "quantity": 8
+            },
+            {
+                "color": "red",
+                "size": "L",
+                "quantity": 3
+            },
+            {
+                "color": "black",
+                "size": "S",
+                "quantity": 0
+            },
+            {
+                "color": "black",
+                "size": "M",
+                "quantity": 5
+            },
+            {
+                "color": "black",
+                "size": "L",
+                "quantity": 6
+            },
+            {
+                "color": "blue",
+                "size": "S",
+                "quantity": 5
+            },
+            {
+                "color": "blue",
+                "size": "M",
+                "quantity": 9
+            },
+            {
+                "color": "blue",
+                "size": "L",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Hoodie",
+        "type": "femail",
+        "price": 70,
+        "availability": [
+            {
+                "color": "red",
+                "size": "S",
+                "quantity": 1
+            },
+            {
+                "color": "red",
+                "size": "M",
+                "quantity": 6
+            },
+            {
+                "color": "red",
+                "size": "L",
+                "quantity": 8
+            },
+            {
+                "color": "black",
+                "size": "S",
+                "quantity": 2
+            },
+            {
+                "color": "black",
+                "size": "M",
+                "quantity": 3
+            },
+            {
+                "color": "black",
+                "size": "L",
+                "quantity": 10
+            },
+            {
+                "color": "blue",
+                "size": "S",
+                "quantity": 9
+            },
+            {
+                "color": "blue",
+                "size": "M",
+                "quantity": 7
+            },
+            {
+                "color": "blue",
+                "size": "L",
+                "quantity": 2
+            }
+        ]
+    }
 ]

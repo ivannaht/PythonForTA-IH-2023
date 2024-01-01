@@ -20,38 +20,56 @@ class ClothShopFileEditor(JsonFileEditor):
             id=len(self.data) + 1,
             name=name,
             type=type,
-            price=random.randint(40, 90),
-            colors=["red", "black", "blue"],
-            sizes=["XS", "S", "M", "L", "XL"],
-            availability_by_color=[
+            price=random.randint(40, 99),
+            availability=[
                 {
-                    'red': [
-                        {'size': 'XS', 'quantity': random.randint(0, 10)}, {'size': 'S', 'quantity': random.randint(0, 10)},
-                        {'size': 'M', 'quantity': random.randint(0, 10)}, {'size': 'L', 'quantity': random.randint(0, 10)},
-                        {'size': 'XL', 'quantity': random.randint(0, 10)}
-                    ]
+                    "color": "red",
+                    "size": "S",
+                    "quantity": random.randint(0, 10)
                 },
                 {
-                    'black': [
-                        {'size': 'XS', 'quantity': random.randint(0, 10)}, {'size': 'S', 'quantity': random.randint(0, 10)},
-                        {'size': 'M', 'quantity': random.randint(0, 10)}, {'size': 'L', 'quantity': random.randint(0, 10)},
-                        {'size': 'XL', 'quantity': random.randint(0, 10)}
-                    ]
+                    "color": "red",
+                    "size": "M",
+                    "quantity": random.randint(0, 10)
                 },
                 {
-                    'blue': [
-                        {'size': 'XS', 'quantity': random.randint(0, 10)}, {'size': 'S', 'quantity': random.randint(0, 10)},
-                        {'size': 'M', 'quantity': random.randint(0, 10)}, {'size': 'L', 'quantity': random.randint(0, 10)},
-                        {'size': 'XL', 'quantity': random.randint(0, 10)}
-                    ]
+                    "color": "red",
+                    "size": "L",
+                    "quantity": random.randint(0, 10)
+                },
+                {
+                    "color": "black",
+                    "size": "S",
+                    "quantity": random.randint(0, 10)
+                },
+                {
+                    "color": "black",
+                    "size": "M",
+                    "quantity": random.randint(0, 10)
+                },
+                {
+                    "color": "black",
+                    "size": "L",
+                    "quantity": random.randint(0, 10)
+                },
+                {
+                    "color": "blue",
+                    "size": "S",
+                    "quantity": random.randint(0, 10)
+                },
+                {
+                    "color": "blue",
+                    "size": "M",
+                    "quantity": random.randint(0, 10)
+                },
+                {
+                    "color": "blue",
+                    "size": "L",
+                    "quantity": random.randint(0, 10)
                 }
             ]
         )
 
 
-# file_2 = ClothShopFileEditor("cloth_shop.json", "assets")
-# print(file_2.generate_new_item())
-# file_2.add_item()
-#
-# print(file_2.data)
-# print(len(file_2.data))
+file_2 = ClothShopFileEditor("cloth_shop.json", "assets")
+file_2.add_item()
