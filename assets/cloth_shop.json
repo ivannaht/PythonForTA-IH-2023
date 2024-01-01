@@ -3,6 +3,7 @@
         "id": 1,
         "name": "Skirt",
         "type": "female",
+        "price": 50,
         "colors": [
             "red",
             "black",
@@ -92,190 +93,9 @@
     },
     {
         "id": 2,
-        "name": "T-shirt",
-        "type": "male",
-        "colors": [
-            "red",
-            "black",
-            "blue"
-        ],
-        "sizes": [
-            "XS",
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "availability_by_color": [
-            {
-                "red": [
-                    {
-                        "size": "XS",
-                        "quantity": 3
-                    },
-                    {
-                        "size": "S",
-                        "quantity": 2
-                    },
-                    {
-                        "size": "M",
-                        "quantity": 5
-                    },
-                    {
-                        "size": "L",
-                        "quantity": 0
-                    },
-                    {
-                        "size": "XL",
-                        "quantity": 1
-                    }
-                ]
-            },
-            {
-                "black": [
-                    {
-                        "size": "XS",
-                        "quantity": 3
-                    },
-                    {
-                        "size": "S",
-                        "quantity": 2
-                    },
-                    {
-                        "size": "M",
-                        "quantity": 5
-                    },
-                    {
-                        "size": "L",
-                        "quantity": 0
-                    },
-                    {
-                        "size": "XL",
-                        "quantity": 1
-                    }
-                ]
-            },
-            {
-                "blue": [
-                    {
-                        "size": "XS",
-                        "quantity": 3
-                    },
-                    {
-                        "size": "S",
-                        "quantity": 2
-                    },
-                    {
-                        "size": "M",
-                        "quantity": 5
-                    },
-                    {
-                        "size": "L",
-                        "quantity": 0
-                    },
-                    {
-                        "size": "XL",
-                        "quantity": 1
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "id": 3,
         "name": "Jumper",
-        "type": "male",
-        "colors": [
-            "red",
-            "black",
-            "blue"
-        ],
-        "sizes": [
-            "XS",
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "availability_by_color": [
-            {
-                "red": [
-                    {
-                        "size": "XS",
-                        "quantity": 3
-                    },
-                    {
-                        "size": "S",
-                        "quantity": 2
-                    },
-                    {
-                        "size": "M",
-                        "quantity": 5
-                    },
-                    {
-                        "size": "L",
-                        "quantity": 0
-                    },
-                    {
-                        "size": "XL",
-                        "quantity": 1
-                    }
-                ]
-            },
-            {
-                "black": [
-                    {
-                        "size": "XS",
-                        "quantity": 3
-                    },
-                    {
-                        "size": "S",
-                        "quantity": 2
-                    },
-                    {
-                        "size": "M",
-                        "quantity": 5
-                    },
-                    {
-                        "size": "L",
-                        "quantity": 0
-                    },
-                    {
-                        "size": "XL",
-                        "quantity": 1
-                    }
-                ]
-            },
-            {
-                "blue": [
-                    {
-                        "size": "XS",
-                        "quantity": 3
-                    },
-                    {
-                        "size": "S",
-                        "quantity": 2
-                    },
-                    {
-                        "size": "M",
-                        "quantity": 5
-                    },
-                    {
-                        "size": "L",
-                        "quantity": 0
-                    },
-                    {
-                        "size": "XL",
-                        "quantity": 1
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "name": "Hoodie",
         "type": "femail",
+        "price": 68,
         "colors": [
             "red",
             "black",
@@ -293,7 +113,7 @@
                 "red": [
                     {
                         "size": "XS",
-                        "quantity": 3
+                        "quantity": 9
                     },
                     {
                         "size": "S",
@@ -301,15 +121,15 @@
                     },
                     {
                         "size": "M",
-                        "quantity": 5
+                        "quantity": 4
                     },
                     {
                         "size": "L",
-                        "quantity": 0
+                        "quantity": 1
                     },
                     {
                         "size": "XL",
-                        "quantity": 1
+                        "quantity": 4
                     }
                 ]
             },
@@ -317,23 +137,23 @@
                 "black": [
                     {
                         "size": "XS",
-                        "quantity": 3
+                        "quantity": 4
                     },
                     {
                         "size": "S",
-                        "quantity": 2
+                        "quantity": 4
                     },
                     {
                         "size": "M",
-                        "quantity": 5
+                        "quantity": 4
                     },
                     {
                         "size": "L",
-                        "quantity": 0
+                        "quantity": 1
                     },
                     {
                         "size": "XL",
-                        "quantity": 1
+                        "quantity": 7
                     }
                 ]
             },
@@ -341,7 +161,7 @@
                 "blue": [
                     {
                         "size": "XS",
-                        "quantity": 3
+                        "quantity": 8
                     },
                     {
                         "size": "S",
@@ -349,106 +169,15 @@
                     },
                     {
                         "size": "M",
-                        "quantity": 5
+                        "quantity": 10
                     },
                     {
                         "size": "L",
-                        "quantity": 0
-                    },
-                    {
-                        "size": "XL",
-                        "quantity": 1
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "name": "Jacket",
-        "type": "male",
-        "colors": [
-            "red",
-            "black",
-            "blue"
-        ],
-        "sizes": [
-            "XS",
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "availability_by_color": [
-            {
-                "red": [
-                    {
-                        "size": "XS",
-                        "quantity": 3
-                    },
-                    {
-                        "size": "S",
-                        "quantity": 2
-                    },
-                    {
-                        "size": "M",
                         "quantity": 5
                     },
                     {
-                        "size": "L",
-                        "quantity": 0
-                    },
-                    {
                         "size": "XL",
-                        "quantity": 1
-                    }
-                ]
-            },
-            {
-                "black": [
-                    {
-                        "size": "XS",
-                        "quantity": 3
-                    },
-                    {
-                        "size": "S",
-                        "quantity": 2
-                    },
-                    {
-                        "size": "M",
-                        "quantity": 5
-                    },
-                    {
-                        "size": "L",
-                        "quantity": 0
-                    },
-                    {
-                        "size": "XL",
-                        "quantity": 1
-                    }
-                ]
-            },
-            {
-                "blue": [
-                    {
-                        "size": "XS",
-                        "quantity": 3
-                    },
-                    {
-                        "size": "S",
-                        "quantity": 2
-                    },
-                    {
-                        "size": "M",
-                        "quantity": 5
-                    },
-                    {
-                        "size": "L",
-                        "quantity": 0
-                    },
-                    {
-                        "size": "XL",
-                        "quantity": 1
+                        "quantity": 8
                     }
                 ]
             }

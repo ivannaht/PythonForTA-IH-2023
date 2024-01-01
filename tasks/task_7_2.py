@@ -20,28 +20,29 @@ class ClothShopFileEditor(JsonFileEditor):
             id=len(self.data) + 1,
             name=name,
             type=type,
+            price=random.randint(40, 90),
             colors=["red", "black", "blue"],
             sizes=["XS", "S", "M", "L", "XL"],
             availability_by_color=[
                 {
                     'red': [
-                        {'size': 'XS', 'quantity': 3}, {'size': 'S', 'quantity': 2},
-                        {'size': 'M', 'quantity': 5}, {'size': 'L', 'quantity': 0},
-                        {'size': 'XL', 'quantity': 1}
+                        {'size': 'XS', 'quantity': random.randint(0, 10)}, {'size': 'S', 'quantity': random.randint(0, 10)},
+                        {'size': 'M', 'quantity': random.randint(0, 10)}, {'size': 'L', 'quantity': random.randint(0, 10)},
+                        {'size': 'XL', 'quantity': random.randint(0, 10)}
                     ]
                 },
                 {
                     'black': [
-                        {'size': 'XS', 'quantity': 3}, {'size': 'S', 'quantity': 2},
-                        {'size': 'M', 'quantity': 5}, {'size': 'L', 'quantity': 0},
-                        {'size': 'XL', 'quantity': 1}
+                        {'size': 'XS', 'quantity': random.randint(0, 10)}, {'size': 'S', 'quantity': random.randint(0, 10)},
+                        {'size': 'M', 'quantity': random.randint(0, 10)}, {'size': 'L', 'quantity': random.randint(0, 10)},
+                        {'size': 'XL', 'quantity': random.randint(0, 10)}
                     ]
                 },
                 {
                     'blue': [
-                        {'size': 'XS', 'quantity': 3}, {'size': 'S', 'quantity': 2},
-                        {'size': 'M', 'quantity': 5}, {'size': 'L', 'quantity': 0},
-                        {'size': 'XL', 'quantity': 1}
+                        {'size': 'XS', 'quantity': random.randint(0, 10)}, {'size': 'S', 'quantity': random.randint(0, 10)},
+                        {'size': 'M', 'quantity': random.randint(0, 10)}, {'size': 'L', 'quantity': random.randint(0, 10)},
+                        {'size': 'XL', 'quantity': random.randint(0, 10)}
                     ]
                 }
             ]
