@@ -1,5 +1,4 @@
 import random
-
 from tasks.json_file_editor import JsonFileEditor
 
 
@@ -20,14 +19,37 @@ class ClothShopFileEditor(JsonFileEditor):
         return dict(
             id=len(self.data) + 1,
             name=name,
-            colors=["white", "black", "gray"],
+            type=type,
+            colors=["red", "black", "blue"],
             sizes=["XS", "S", "M", "L", "XL"],
-            type=type
+            availability_by_color=[
+                {
+                    'red': [
+                        {'size': 'XS', 'quantity': 3}, {'size': 'S', 'quantity': 2},
+                        {'size': 'M', 'quantity': 5}, {'size': 'L', 'quantity': 0},
+                        {'size': 'XL', 'quantity': 1}
+                    ]
+                },
+                {
+                    'black': [
+                        {'size': 'XS', 'quantity': 3}, {'size': 'S', 'quantity': 2},
+                        {'size': 'M', 'quantity': 5}, {'size': 'L', 'quantity': 0},
+                        {'size': 'XL', 'quantity': 1}
+                    ]
+                },
+                {
+                    'blue': [
+                        {'size': 'XS', 'quantity': 3}, {'size': 'S', 'quantity': 2},
+                        {'size': 'M', 'quantity': 5}, {'size': 'L', 'quantity': 0},
+                        {'size': 'XL', 'quantity': 1}
+                    ]
+                }
+            ]
         )
 
 
 file_2 = ClothShopFileEditor("cloth_shop.json", "assets")
-file_2.generate_new_item()
+print(file_2.generate_new_item())
 file_2.add_item()
 
 print(file_2.data)
