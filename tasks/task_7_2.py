@@ -1,5 +1,4 @@
 import random
-
 from tasks.json_file_editor import JsonFileEditor
 
 
@@ -8,7 +7,7 @@ class ClothShopFileEditor(JsonFileEditor):
 
     def __init__(self, json_file, directory):
         """Child class for reading and modifying geometric_shapes.json file """
-        super(self.__class__, self).__init__(json_file, directory)
+        JsonFileEditor.__init__(self, json_file, directory)
 
     def generate_new_item(self):
         """function for generating new item"""
@@ -20,15 +19,57 @@ class ClothShopFileEditor(JsonFileEditor):
         return dict(
             id=len(self.data) + 1,
             name=name,
-            colors=["white", "black", "gray"],
-            sizes=["XS", "S", "M", "L", "XL"],
-            type=type
+            type=type,
+            price=random.randint(40, 99),
+            availability=[
+                {
+                    "color": "red",
+                    "size": "S",
+                    "quantity": random.randint(0, 10)
+                },
+                {
+                    "color": "red",
+                    "size": "M",
+                    "quantity": random.randint(0, 10)
+                },
+                {
+                    "color": "red",
+                    "size": "L",
+                    "quantity": random.randint(0, 10)
+                },
+                {
+                    "color": "black",
+                    "size": "S",
+                    "quantity": random.randint(0, 10)
+                },
+                {
+                    "color": "black",
+                    "size": "M",
+                    "quantity": random.randint(0, 10)
+                },
+                {
+                    "color": "black",
+                    "size": "L",
+                    "quantity": random.randint(0, 10)
+                },
+                {
+                    "color": "blue",
+                    "size": "S",
+                    "quantity": random.randint(0, 10)
+                },
+                {
+                    "color": "blue",
+                    "size": "M",
+                    "quantity": random.randint(0, 10)
+                },
+                {
+                    "color": "blue",
+                    "size": "L",
+                    "quantity": random.randint(0, 10)
+                }
+            ]
         )
 
 
 file_2 = ClothShopFileEditor("cloth_shop.json", "assets")
-file_2.generate_new_item()
 file_2.add_item()
-
-print(file_2.data)
-print(len(file_2.data))
